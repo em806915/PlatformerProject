@@ -28,5 +28,10 @@ public class Player : MonoBehaviour {
             playerStats.lives -= 1;
             GameMaster.KillPlayer(this);
         }
+        if (col.gameObject.name == "Mace")
+        {
+            playerStats.lives -= 1;
+            GameMaster.KillPlayer(this);
+        }
     }
 }
