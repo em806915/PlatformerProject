@@ -17474,6 +17474,7 @@ MonoBehaviour:
     type: 2}
   SpawnPoint: {fileID: 1643176412}
   collectable: {fileID: 0}
+  player: {fileID: 1865046368}
 --- !u!4 &1006277964
 Transform:
   m_ObjectHideFlags: 0

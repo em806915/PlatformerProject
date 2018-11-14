@@ -16,14 +16,10 @@ public class GameMaster : MonoBehaviour {
     public Transform playerPrefab;
     public Transform SpawnPoint;
     public Transform collectable;
-
-    public void RespawnPlayer(){
-        Instantiate(playerPrefab, SpawnPoint.position, SpawnPoint.rotation);
-    }
+    public GameObject player;
 
     public static void KillPlayer(Player player) {
-        Destroy(player.gameObject);
-        gm.RespawnPlayer();
+        player.transform.position = new Vector3(2, 0.5f, 0);
     }
 
     public static void Collect(Transform collectable)
