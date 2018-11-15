@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -32,6 +33,10 @@ public class Player : MonoBehaviour {
         {
             playerStats.lives -= 1;
             GameMaster.KillPlayer(this);
+        }
+        if (col.gameObject.name == "End")
+        {
+            SceneManager.LoadScene("SceneSelect", LoadSceneMode.Single);
         }
     }
 }
