@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Mace : MonoBehaviour {
 
+    public GameObject mace;
     int direction = 1; //int direction where 0 is stay, 1 up, -1 down    
-    int top = 3;
-    int bottom = -1;
+    float top;
+    float bottom;
 
     float speed = 5;
 
+    void Start() {
+
+        top = mace.transform.position.y + 4F;
+        bottom = mace.transform.position.y;
+
+    }
 
     void Update()
     {
