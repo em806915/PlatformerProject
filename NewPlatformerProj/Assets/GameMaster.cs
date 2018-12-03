@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
 
@@ -19,7 +21,16 @@ public class GameMaster : MonoBehaviour {
     public GameObject player;
 
     public static void KillPlayer(Player player) {
-        player.transform.position = new Vector3(2, 0.5f, 0);
+        if (player.playerStats.lives <= 0)
+        {
+            player.playerStats.lives = 3;
+            player.playerStats.coins = 0;
+            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        }
+        else
+        {
+            player.transform.position = new Vector3(2, 0.5f, 0);
+        }
     }
 
     public static void Collect(Transform collectable)
