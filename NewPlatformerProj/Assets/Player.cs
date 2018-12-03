@@ -42,8 +42,12 @@ public class Player : MonoBehaviour {
         {
             playerStats.lives -= 1;
             GameMaster.KillPlayer(this);
+        }
 
-
+        if (col.gameObject.name == "Saw")
+        {
+            playerStats.lives -= 1;
+            GameMaster.KillPlayer(this);
         }
 
         if (col.gameObject.name == "End")
