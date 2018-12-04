@@ -25,7 +25,7 @@ public class GameMaster : MonoBehaviour {
         {
             player.playerStats.lives = 3;
             player.playerStats.coins = 0;
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
         else
         {

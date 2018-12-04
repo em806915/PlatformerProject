@@ -21,13 +21,14 @@ public class Player : MonoBehaviour {
             playerStats.lives -= 1;
             GameMaster.KillPlayer(this);
         }
+
     }
 
 
     void OnCollisionEnter2D(Collision2D col)
     {
         print("Lives: ");
-
+         
         if (col.gameObject.name == "Coin") {
             playerStats.coins += 1;
             Destroy(col.gameObject);
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour {
 
         if (col.gameObject.name == "End")
         {
-            SceneManager.LoadScene("SceneSelect", LoadSceneMode.Single);
+            SceneManager.LoadScene("Congrats", LoadSceneMode.Single);
         }
     } //End OnCollisionEnter
 }
